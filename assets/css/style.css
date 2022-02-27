@@ -1,0 +1,32 @@
+:root {
+    --darkest: rgb(73, 84, 100);
+    --dark: rgb(187, 191, 202);
+    --light: rgb(232, 232, 232);
+    --lightest: rgb(244, 244, 242);
+    --bg-colour: #fff;
+}
+
+* {
+    font-family: "Garamond", "Georgia", "Times New Roman", Times, serif;
+    font-size: 18px;
+}
+
+body {
+    background-color: var(--bg-colour);
+}
+
+header {
+    border: 1px solid green;
+}
+
+main {
+    border: 1px solid red;
+}
+
+section {
+    border: 1px solid orange;
+}
+
+footer {
+    border: 1px solid green;
+}
