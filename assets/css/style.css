@@ -34,11 +34,12 @@ nav li {
 }
 
 
-
-
 /* MAIN elements  */
 main {
     border: 1px solid red;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
 }
 
 main p {
@@ -55,6 +56,7 @@ section.row {
     flex-flow: row wrap;
     align-items: stretch;
     margin: 2rem;
+    max-width: 1200px;
 }
 
 
@@ -88,7 +90,24 @@ section.row {
 
 
 /* MAIN: portfolio section */
+.portfolio-row {
+    display: flex;
+    flex-flow: row wrap;
+    padding: 2rem;
+    max-width: 1200px;
+}
 
+
+/* MAIN: about me section */
+.portfolio-container {
+    border: 1px solid purple;
+    flex: 1 0 40%;
+    margin: 1rem;
+}
+
+#showcase-container {
+    flex: 3 0 100%;
+}
 
 
 
@@ -129,17 +148,17 @@ section.row {
 
 .gallery-card {
     width: 100%;
-    height: auto;
+    /* height: auto; */
     position: relative;
 }
 
 .gallery-card img {
     width: 100%;
-    height: 100%;
+    height: auto;
     object-fit: cover;
 }
 
-.gallery-card a {
+/* .gallery-card a {
     display: block;
     position: absolute;
     width: 50%;
@@ -149,7 +168,7 @@ section.row {
     padding: 2rem 4.5rem;
     text-align: center;
 
-}
+} */
 
 
 
@@ -167,32 +186,42 @@ footer {
 }
 
 
+
 /* MEDIA QUERIES */
 @media screen and (min-width: 768px) {
-    .row {
+    .row, portfolio-row {
         justify-content: space-evenly;
     }
 
-    .about-container {
+    .about-container, .portfolio-container {
         flex: 1;
-        max-width: 45%;
+        max-width: 50%;
     }
 
 
+    /* .portfolio-container {
+        max-width: 45%;
+    } */
+}
+
+
 @media screen and (min-width: 992px) {
-    .row {
+    .row, .portfolio-row {
         justify-content: space-evenly;
         margin: 0 5%;
     }
 
-    .about-container {
+    .about-container, .portfolio-container {
         flex: 1;
         max-width: 45%;
     }
-
 /* 
-    .pf-container-main {
-        flex: 3;
-        max-width: 70%;
+    .portfolio-row {
+        justify-content: space-evenly;
+    }
+
+    .portfolio-container {
+        flex: 1;
+        max-width: 45%;
     } */
 }
