@@ -54,6 +54,7 @@ section.row {
     display: flex;
     flex-flow: row wrap;
     align-items: center;
+    margin: 2rem;
 }
 
 
@@ -62,6 +63,7 @@ section.row {
     border: 1px solid purple;
     flex: 1 0 100%;
     max-width: 100%;
+    margin-bottom: 2rem;
 }
 
 .portrait {
