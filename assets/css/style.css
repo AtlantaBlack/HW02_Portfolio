@@ -1,4 +1,5 @@
 :root {
+    --text: rgb(21, 26, 34);
     --darkest: rgb(73, 84, 100);
     --dark: rgb(187, 191, 202);
     --light: rgb(232, 232, 232);
@@ -9,41 +10,78 @@
 * {
     font-family: "Garamond", "Georgia", "Times New Roman", Times, serif;
     font-size: 18px;
-    line-height: 1.5rem;
 }
 
-/* body {
-    background-color: var(--lightest);
-} */
+body {
+    background-color: var(--dark);
+    color: var(--text);
+    line-height: 1.5rem;
+}
 
 a {
     text-decoration: none;
 }
 
 
-
+h1 {
+    font-size: 4rem;
+}
 
 /* HEADER elements */
 header {
     border: 1px solid green;
-    height: 50vh;
+    width: 100%;
+    background-color: var(--lightest);
 }
 
-nav li {
+.header-row {
+    border: 1px solid red;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+
+    /* /* max-width: 1200px; */
+    height: 50vh;
+    margin: 5%;
+}
+
+.header-container {
+    flex: 1 0 100%;
+}
+
+.intro {
+    border: 1px solid lightskyblue;
+    margin-bottom: 2rem;
+}
+
+.intro h1 {
+    color: var(--darkest);
+}
+
+.main-nav {
+    border: 1px solid violet;
+}
+
+.main-nav li {
     display: inline;
 }
+
 
 
 /* MAIN elements  */
 main {
     border: 1px solid red;
-    display: flex;
-    flex-flow: column wrap;
-    align-items: center;
 }
 
 main p {
     margin: 1rem 0;
+}
+
+.overarching-flex {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
 }
 
 section {
@@ -56,7 +94,7 @@ section.row {
     flex-flow: row wrap;
     align-items: stretch;
     margin: 2rem;
-    max-width: 1200px;
+    /* max-width: 1200px; */
 }
 
 
@@ -94,7 +132,7 @@ section.row {
     display: flex;
     flex-flow: row wrap;
     padding: 2rem;
-    max-width: 1200px;
+    /* max-width: 1200px; */
 }
 
 
@@ -109,42 +147,6 @@ section.row {
     flex: 3 0 100%;
 }
 
-
-
-/* .portfolio-row {
-    display: flex;
-    flex-flow: column wrap;
-    justify-items: center;
-    max-width: 960px;
-    max-height: 50vh;
-}
-
-.pf-container1 {
-    flex: 3;
-}
-
-.pf-container2 {
-    border: 1px solid blue;
-    flex: 1;
-} */
-
-/* 
-.pf-container-main {
-    border: 1px solid blue;
-    display: flex;
-    flex-flow: row wrap;
-    max-width: 100%;
-}
-
-.pf-card-wrapper {
-    border: 1px solid lightgreen;
-    flex: 1 0 100%;
-}
-
-#pf-card-wrapper-A {
-    border: 1px solid pink;
-    flex: 2 0 100%;
-} */
 
 .gallery-card {
     width: 100%;
@@ -182,6 +184,7 @@ footer {
     border: 1px solid green;
     height: 5vh;
 
+    margin-top: 1rem;
     text-align: center;
 }
 
@@ -189,7 +192,7 @@ footer {
 
 /* MEDIA QUERIES */
 @media screen and (min-width: 768px) {
-    .row, portfolio-row {
+    .row, .portfolio-row {
         justify-content: space-evenly;
     }
 
@@ -197,11 +200,6 @@ footer {
         flex: 1;
         max-width: 50%;
     }
-
-
-    /* .portfolio-container {
-        max-width: 45%;
-    } */
 }
 
 
@@ -215,13 +213,4 @@ footer {
         flex: 1;
         max-width: 45%;
     }
-/* 
-    .portfolio-row {
-        justify-content: space-evenly;
-    }
-
-    .portfolio-container {
-        flex: 1;
-        max-width: 45%;
-    } */
 }
