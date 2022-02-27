@@ -12,9 +12,9 @@
     line-height: 1.5rem;
 }
 
-body {
-    /* background-color: var(--lightest); */
-}
+/* body {
+    background-color: var(--lightest);
+} */
 
 a {
     text-decoration: none;
@@ -23,14 +23,18 @@ a {
 
 
 
-/* header elements */
+/* HEADER elements */
 header {
-    /* border: 1px solid green; */
+    border: 1px solid green;
+    height: 50vh;
 }
 
 nav li {
     display: inline;
 }
+
+
+
 
 /* MAIN elements  */
 main {
@@ -46,11 +50,12 @@ section {
 }
 
 /* FLEX SECTION ROWS */
-.about-row {
+section.row {
     display: flex;
     flex-flow: row wrap;
     align-items: center;
 }
+
 
 /* MAIN: about me section */
 .about-container {
@@ -75,37 +80,105 @@ section {
 
 
 /* MAIN: portfolio section */
-.portfolio-h2-container {
+
+
+/* .portfolio-row {
+    display: flex;
+    flex-flow: column wrap;
+    justify-items: center;
+    max-width: 960px;
+    max-height: 50vh;
+}
+
+.pf-container1 {
+    flex: 3;
+}
+
+.pf-container2 {
     border: 1px solid blue;
+    flex: 1;
+} */
+
+/* 
+.pf-container-main {
+    border: 1px solid blue;
+    display: flex;
+    flex-flow: row wrap;
+    max-width: 100%;
+}
+
+.pf-card-wrapper {
+    border: 1px solid lightgreen;
     flex: 1 0 100%;
 }
 
+#pf-card-wrapper-A {
+    border: 1px solid pink;
+    flex: 2 0 100%;
+} */
 
+.gallery-card {
+    width: 100%;
+    height: auto;
+    position: relative;
+}
 
-/* footer elements */
-footer {
-    /* border: 1px solid green; */
+.gallery-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.gallery-card a {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    background-color: red;
+    padding: 2rem 5rem;
+
 }
 
 
+
+/* MAIN: contact section */
+
+
+
+
+/* FOOTER elements */
+footer {
+    border: 1px solid green;
+    height: 5vh;
+}
+
+
+/* MEDIA QUERIES */
 @media screen and (min-width: 768px) {
-    .about-row {
+    .row {
         justify-content: space-evenly;
     }
 
     .about-container {
-        flex: 1 0 50%;
+        flex: 1;
         max-width: 45%;
     }
-}
 
 @media screen and (min-width: 992px) {
-    .about-row {
+    .row {
         justify-content: space-evenly;
+        margin: 0 5%;
     }
 
     .about-container {
-        flex: 1 0 50%;
+        flex: 1;
         max-width: 45%;
     }
+
+/* 
+    .pf-container-main {
+        flex: 3;
+        max-width: 70%;
+    } */
 }
