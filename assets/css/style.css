@@ -3,22 +3,38 @@
     --dark: rgb(187, 191, 202);
     --light: rgb(232, 232, 232);
     --lightest: rgb(244, 244, 242);
-    --bg-colour: #fff;
+    --serene-green: rgb(124, 148, 115);
 }
 
 * {
     font-family: "Garamond", "Georgia", "Times New Roman", Times, serif;
     font-size: 18px;
+    line-height: 1.5rem;
 }
 
 body {
-    background-color: var(--bg-colour);
+    background-color: var(--lightest);
 }
 
-header {
+a {
+    text-decoration: none;
+}
+
+p {
+    margin: 1.5rem 0;
+}
+
+
+
+/* header elements */
+header.header-row {
     border: 1px solid green;
 }
 
+
+
+
+/* main elements  */
 main {
     border: 1px solid red;
 }
@@ -27,6 +43,11 @@ section {
     border: 1px solid orange;
 }
 
+
+
+/* footer elements */
 footer {
     border: 1px solid green;
 }
+
+
