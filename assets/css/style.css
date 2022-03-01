@@ -33,6 +33,7 @@ h1 { font-size: 4rem; }
 h2 { font-size: 1.5rem; }
 h3 { font-size: 1.2rem; }
 
+
 /* HEADER elements */
 header {
     border: 1px solid green;
@@ -46,8 +47,6 @@ header {
     flex-flow: row wrap;
     align-items: center;
     justify-content: center;
-    
-    /* height: 60vh; */
 
     min-height: 350px;
     max-height: 60vh;
@@ -188,15 +187,16 @@ section.row {
     width: inherit;
     height: inherit;
     object-fit: cover;
+    object-position: top right;
 }
 
 .gallery-card a {
-    /* display: block; */
+    display: block;
     position: absolute;
     width: 100%;
     bottom: 5%;
     left: 0;
-    background-color: rgba(255,255,255,0.55);
+    background-image: linear-gradient(to right, rgba(255,255,255,0.55), var(--lightest));
     padding: 0.5rem;
 }
 
@@ -207,12 +207,12 @@ section.row {
     /* height: auto; */
     position: relative;
 
-    background: url(../images/yoshi-bg-cropped.jpg);
-    background-size: cover;
+    background-color: var(--serene-green);
 }
 
 #showcase-card img {
-    width: 100%;
+    width: inherit;
+    height: inherit;
     object-fit: cover;
 }
 
@@ -222,7 +222,7 @@ section.row {
     width: 100%;
     bottom: 5%;
     left: 0;
-    background-color: rgba(255,255,255,0.55);
+    background-image: linear-gradient(to right, rgba(255,255,255,0.55), var(--lightest));
     padding: 0.5rem;
 }
 
@@ -268,11 +268,10 @@ footer {
 @media screen and (max-width: 281px) {
     .portfolio-row {
         flex-direction: column;
-        justify-content: space-evenly;
+        justify-content: space-between;
     }
 
     .portfolio-container {
-        width: 100%;
         height: 15vh;
     }
 }
