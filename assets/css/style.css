@@ -5,6 +5,18 @@
     --light: rgb(238, 238, 238);
     --lightest: rgb(244, 244, 242);
     --serene-green: rgb(124, 148, 115);
+
+    /* --text: #22223b;
+    --darkest: #4a4e69;
+    --dark: #9a8c98;
+    --light: #c9ada7;
+    --lightest: #f2e9e4;
+
+    --serene-green: rgb(124, 148, 115);
+
+    --light-grey: rgb(238, 238, 238);
+    --off-white: rgb(244, 244, 242); */
+
 }
 
 * {
@@ -146,6 +158,9 @@ section.row {
     flex: 1 0 100%;
     max-width: 100%;
     margin-bottom: 1rem;
+
+    background-color: var(--darkest);
+    color: var(--light);
 }
 
 .about-card {
@@ -201,6 +216,7 @@ li p {
     display: flex;
     flex-flow: column wrap;
     justify-content: space-between;
+    margin: 2rem;
 }
 
 
@@ -208,7 +224,6 @@ li p {
 #portfolio-text-container {
     /* border: 1px solid red; */
     flex: 0 0 100%;
-    padding: 0 5vh;
 }
 
 #portfolio-text {
@@ -217,6 +232,10 @@ li p {
     justify-content: center;
     align-items: center;
     text-align: center;
+
+    background-color: var(--light);
+    margin-bottom: 1.5rem;
+    padding-top: 1rem;
 }
 
 
@@ -260,7 +279,7 @@ a.new-gallery-card {
     bottom: 5%;
     left: 0;
     text-align: left;
-    background-image: linear-gradient(to right, rgba(255,255,255,0.55), var(--lightest));
+    background-image: linear-gradient(to left, rgba(255,255,255,0.5), var(--lightest));
     color: var(--darkest);
     padding: 0.5rem;
 }
@@ -291,7 +310,7 @@ a#new-showcase-card {
     bottom: 5%;
     left: 0;
     text-align: left;
-    background-image: linear-gradient(to right, rgba(255,255,255,0.55), var(--lightest));
+    background-image: linear-gradient(to left, rgba(255,255,255,0.5), var(--lightest));
     color: var(--darkest);
     padding: 0.5rem;
 }
@@ -300,13 +319,23 @@ a#new-showcase-card {
 
 /* MAIN: contact section */
 
+.contact-form {
+    text-align: left;
+}
 
+.contact-form label {
+    display: block;
+}
+
+.contact-form input {
+    margin-bottom: 1.5rem;
+}
 
 
 /* FOOTER elements */
 footer {
     /* border: 1px solid green; */
-    background-color: var(--lightest);
+    background-color: var(--light);
     height: 6vh;
     text-align: center;
 }
