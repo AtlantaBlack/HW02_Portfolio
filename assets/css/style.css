@@ -21,50 +21,43 @@
 }
 
 body {
-    /* font-family: "Proxima Nova", "Europa", "Helvetica", Arial, sans-serif; */
     font-family: "Garamond", "Georgia", "Times New Roman", Times, serif;
     background-color: var(--dark);
     color: var(--text);
 }
 
 h1, h2, h3, h4, h5, h6 {
-    /* font-family: "Proxima Nova", "Europa", "Helvetica", Arial, sans-serif; */
     font-family: "Garamond", "Georgia", "Times New Roman", Times, serif;
     line-height: 1;
+    margin: 1.5rem 0;
 }
 
-h1 { font-size: 3.8rem; }
-h2 { font-size: 1.8rem; 
-    color: var(--sand); }
-h3 { font-size: 1.2rem; }
+h1 { 
+    font-size: 3.8rem; 
+    color: var(--darkest);
+}
 
-a, 
-a:hover,
-a:visited {
+h2 { 
+    font-size: 1.8rem; 
+    color: var(--sand);
+}
+
+h3 { 
+    font-size: 1.2rem; 
+    color: var(--darkest);
+}
+
+p {
+    text-align: center;
+    margin: 1rem 0;
+    line-height: 1.5rem;
+}
+
+a, a:hover, a:visited {
     text-decoration: none;
     font-family: "Proxima Nova", "Europa", "Helvetica", Arial, sans-serif;
     font-weight: 200;
     text-transform: uppercase;
-
-    background-color: var(--light);
-    color: var(--darkest);
-
-    padding: 0.5rem 0.65rem;
-    border: 0.08rem solid var(--darkest);
-    border-radius: 0.85rem;
-}
-
-a:hover {
-    background-color: var(--serene-green);
-    color: var(--lightest);
-    border-color: var(--serene-green);
-}
-
-p {
-    /* border: 1px solid lightblue; */
-    text-align: center;
-    margin: 1rem 0;
-    line-height: 1.5rem;
 }
 
 .italicised {
@@ -81,57 +74,55 @@ header p {
     text-align: left;
 }
 
+header a,
+header a:hover,
+header a:visited {
+    background-color: var(--light);
+    color: var(--darkest);
+
+    padding: 0.5rem 0.65rem;
+    border: 0.08rem solid var(--darkest);
+    border-radius: 0.85rem;
+}
+
+header a:hover {
+    background-color: var(--serene-green);
+    color: var(--lightest);
+    border-color: var(--serene-green);
+}
+
 .header-row {
-    /* border: 1px solid red; */
     display: flex;
     flex-flow: row wrap;
     align-items: center;
     justify-content: center;
 
     min-height: 350px;
-    /* max-height: 60vh; */
     margin: 6%;
 }
 
 .header-container {
-    /* border: 1px solid yellow; */
     flex: 1 0 100%;
 }
 
 .intro {
-    /* border: 1px solid lightskyblue; */
     margin-bottom: 2rem;
 }
 
-.intro h1 {
-    color: var(--darkest);
-    margin: 1.5rem 0;
-}
-
-
-/* max width for main-nav must change for screen sizes */
 .main-nav {
-    /* border: 1px solid yellow; */
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
     align-items: center;
 }
-.main-nav li {
-    /* border: 1px solid purple; */
+.main-nav li,
+.about-item {
     display: inline;
 }
 
 
 
 /* MAIN elements  */
-main {
-    /* border: 1px solid red; */
-}
-
-section {
-    /* border: 1px solid orange; */
-}
 
 /* FLEX SECTION ROWS */
 section.row {
@@ -141,10 +132,8 @@ section.row {
     margin: 2rem;
 }
 
-
 /* MAIN: about me section */
 .about-container {
-    /* border: 1px solid purple; */
     flex: 1 0 100%;
     max-width: 100%;
     margin: 0.5rem 0;
@@ -159,30 +148,22 @@ section.row {
 }
 
 .about-card {
-    /* border: 1px solid yellow; */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center; 
     height: 100%;
     
-    text-align: center;
     padding: 1rem 2.5rem;
+    margin-bottom: 0.3rem;
 }
 
 .about-list {
-    /* border: 1px solid cyan; */
     margin: 1.5rem 1rem;
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
-
     color: var(--dessert);
-}
-
-.about-item {
-    /* border: 1px solid orange; */
-    display: inline;
 }
 
 li p {
@@ -198,7 +179,6 @@ li p {
 }
 
 #portrait {
-    /* border: 1px solid greenyellow; */
     display: flex;
     min-height: 100%;
 }
@@ -211,21 +191,20 @@ li p {
 
 
 /* MAIN: portfolio section */
+
+.portfolio-row h2{
+    color: var(--darkest);
+}
 .portfolio-row {
     display: flex;
     flex-flow: column wrap;
     justify-content: space-between;
     padding: 2rem;
-
     background-color: var(--light);
 }
 
-
-/* MAIN: about me section */
 #portfolio-text-container {
-    /* border: 1px solid red; */
     flex: 0 0 100%;
-
     margin-bottom: 1.5rem;
     padding-top: 1rem;
 }
@@ -238,7 +217,6 @@ li p {
     text-align: center;
 }
 
-
 #showcase-container {
     flex: 3 0 100%;
     width: 100%;
@@ -248,7 +226,6 @@ li p {
 }
 
 .portfolio-container {
-    /* border: 1px solid purple; */
     flex: 1 0 auto;
     width: 100%;
     height: 25vh;
@@ -256,7 +233,8 @@ li p {
     box-shadow: 0 0.2rem 0.4rem rgba(73, 84, 100, 0.3);
 }
 
-a.new-gallery-card {
+a.new-gallery-card,
+a#new-showcase-card {
     display: block;
     width: 100%;
     height: 25vh;
@@ -267,45 +245,11 @@ a.new-gallery-card {
     border-radius: 0;
 }
 
-.new-gallery-card img {
-    width: inherit;
-    height: inherit;
-    object-fit: cover;
-    object-position: top right;
-}
-
-.new-gallery-card p {
-    /* border: 1px solid lightgreen; */
-    position: absolute;
-    width: 100%;
-    bottom: 5%;
-    left: 0;
-    text-align: left;
-    background-image: linear-gradient(to left, rgba(255,255,255,0.5), var(--lightest));
-    color: var(--darkest);
-    padding: 0.5rem;
-}
-
-.new-gallery-card:hover {
-    box-shadow: 0 0.2rem 0.4rem var(--darkest);
-}
-.new-gallery-card:hover p {
-    color: var(--lightest);
-    background-image: linear-gradient(to right, var(--darkest), rgba(255,255,255,0));
-}
-
-
 a#new-showcase-card {
-    display: block;
-    width: 100%;
     height: 50vh;
-    position: relative;
-    background-color: var(--serene-green);
-    padding: 0;
-    border: 0;
-    border-radius: 0;
 }
 
+.new-gallery-card img,
 #new-showcase-card img {
     width: inherit;
     height: inherit;
@@ -313,8 +257,8 @@ a#new-showcase-card {
     object-position: top right;
 }
 
+.new-gallery-card p,
 #new-showcase-card p {
-    /* border: 1px solid lightgreen; */
     position: absolute;
     width: 100%;
     bottom: 5%;
@@ -325,6 +269,15 @@ a#new-showcase-card {
     padding: 0.5rem;
 }
 
+.new-gallery-card:hover,
+#new-showcase-card:hover {
+    box-shadow: 0 0.2rem 0.4rem var(--darkest);
+}
+.new-gallery-card:hover p,
+#new-showcase-card:hover p {
+    color: var(--lightest);
+    background-image: linear-gradient(to right, var(--darkest), rgba(255,255,255,0));
+}
 
 
 /* MAIN: contact section */
