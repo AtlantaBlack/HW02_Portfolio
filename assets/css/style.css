@@ -122,6 +122,30 @@ section.row {
     padding: 1rem 2rem;
 }
 
+.about-list {
+    /* border: 1px solid cyan; */
+    margin-top: 1rem;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+.about-item {
+    /* border: 1px solid orange; */
+    display: inline;
+}
+
+li p {
+    display: inline;
+    line-height: 0.5rem;
+}
+
+.about-list::before, 
+.about-item::after {
+    content: "|";
+    padding-right: 0.3rem;
+}
+
 #portrait {
     border: 1px solid greenyellow;
     display: flex;
@@ -173,33 +197,6 @@ section.row {
     height: 25vh;
     margin-bottom: 1rem;
 }
-
-
-/* original gallery card formatting */
-/* .gallery-card {
-    width: 100%;
-    height: 25vh;
-    position: relative;
-    background-color: var(--serene-green);
-}
-
-.gallery-card img {
-    width: inherit;
-    height: inherit;
-    object-fit: cover;
-    object-position: top right;
-}
-
-.gallery-card a {
-    display: block;
-    position: absolute;
-    width: 100%;
-    bottom: 5%;
-    left: 0;
-    background-image: linear-gradient(to right, rgba(255,255,255,0.55), var(--lightest));
-    padding: 0.5rem;
-} */
-
 
 .new-gallery-card {
     display: block;
@@ -254,29 +251,6 @@ section.row {
     padding: 0.5rem;
 }
 
-/* original showcase card styling */
-/* #showcase-card {
-    width: 100%;
-    height: 50vh;
-    position: relative;
-
-    background-color: var(--serene-green);
-}
-
-#showcase-card img {
-    width: inherit;
-    height: inherit;
-    object-fit: cover;
-}
-
-#showcase-card a {
-    position: absolute;
-    width: 100%;
-    bottom: 5%;
-    left: 0;
-    background-image: linear-gradient(to right, rgba(255,255,255,0.55), var(--lightest));
-    padding: 0.5rem;
-} */
 
 
 /* MAIN: contact section */
