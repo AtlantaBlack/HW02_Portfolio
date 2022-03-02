@@ -45,6 +45,7 @@ h2 {
 h3 { 
     font-size: 1.2rem; 
     color: var(--darkest);
+    margin: 0;
 }
 
 p {
@@ -65,7 +66,7 @@ a, a:hover, a:visited {
 }
 
 /* HEADER elements */
-header {
+header, footer {
     border: 1px solid var(--light);
     background-color: var(--light);
 }
@@ -75,7 +76,6 @@ header p {
 }
 
 header a,
-header a:hover,
 header a:visited {
     background-color: var(--light);
     color: var(--darkest);
@@ -85,13 +85,11 @@ header a:visited {
     border-radius: 0.85rem;
 }
 
-header a:hover,
-.platforms-list a:hover {
+header a:hover {
     background-color: var(--serene-green);
     color: var(--lightest);
     border-color: var(--serene-green);
 }
-
 
 .header-row {
     display: flex;
@@ -118,6 +116,7 @@ header a:hover,
     justify-content: space-between;
     align-items: center;
 }
+
 .main-nav li,
 .about-item {
     display: inline;
@@ -135,7 +134,7 @@ section.row {
 }
 
 /* MAIN: about me section */
-.about-container {
+.content-container {
     flex: 1 0 100%;
     max-width: 100%;
     margin: 0.5rem 0;
@@ -149,7 +148,7 @@ section.row {
     box-shadow: 0 0 0 0.1rem rgba(244, 244, 242, 0.5);
 }
 
-.about-card {
+.content-card {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -194,7 +193,7 @@ li p {
 
 /* MAIN: portfolio section */
 
-.portfolio-row h2{
+.portfolio-row h2 {
     color: var(--darkest);
 }
 .portfolio-row {
@@ -235,8 +234,8 @@ li p {
     box-shadow: 0 0.2rem 0.4rem rgba(73, 84, 100, 0.3);
 }
 
-a.new-gallery-card,
-a#new-showcase-card {
+a.gallery-card,
+a#showcase-card {
     display: block;
     width: 100%;
     height: 25vh;
@@ -247,20 +246,20 @@ a#new-showcase-card {
     border-radius: 0;
 }
 
-a#new-showcase-card {
+a#showcase-card {
     height: 50vh;
 }
 
-.new-gallery-card img,
-#new-showcase-card img {
+.gallery-card img,
+#showcase-card img {
     width: inherit;
     height: inherit;
     object-fit: cover;
     object-position: top right;
 }
 
-.new-gallery-card p,
-#new-showcase-card p {
+.gallery-card p,
+#showcase-card p {
     position: absolute;
     width: 100%;
     bottom: 5%;
@@ -271,19 +270,20 @@ a#new-showcase-card {
     padding: 0.5rem;
 }
 
-.new-gallery-card:hover,
-#new-showcase-card:hover {
+.gallery-card:hover,
+#showcase-card:hover {
     box-shadow: 0 0.2rem 0.4rem var(--darkest);
+    transition: all 0.2s ease-out;
 }
-.new-gallery-card:hover p,
-#new-showcase-card:hover p {
+
+.gallery-card:hover p,
+#showcase-card:hover p {
     color: var(--lightest);
     background-image: linear-gradient(to right, var(--darkest), rgba(255,255,255,0));
 }
 
 
 /* MAIN: contact section */
-
 .contact-platforms li img {
     width: 1rem;
     height: 1rem;
@@ -294,18 +294,22 @@ a#new-showcase-card {
     display: flex;
 }
 
-.platforms-list a, 
-.platforms-list a:hover,
+.platforms-list a,
 .platforms-list a:visited {
     background-color: var(--darkest);
     color: var(--lightest);
     padding: 0.2rem 0.5rem;
 }
 
+.platforms-list a:hover {
+    background-color: var(--serene-green);
+    color: var(--lightest);
+    border-color: var(--serene-green);
+}
+
 .contact-form {
     text-align: left;
-    margin-top: 1.5rem;
-    margin-bottom: 0.3rem;
+    margin: 1.5rem 0;
     line-height: 2rem;
 }
 
@@ -336,18 +340,18 @@ textarea {
 }
 
 .contact-form button {
-    -webkit-appearance:none;
-    appearance:none;
-
-    border: 0.1rem solid var(--light);
+    -webkit-appearance: none;
+    appearance: none;
     width: 150px;
-    padding: 0.25rem;
+    border: 0.1rem solid var(--light);
+    border-radius: 0.5rem;
     background-color: var(--light);
     color: var(--text);
     font-family: "Proxima Nova", "Europa", "Helvetica", Arial, sans-serif;
     text-transform: uppercase;
     font-weight: 300;
-    border-radius: 0.5rem;
+    padding: 0.25rem;
+    margin-top: 1rem;
 }
 
 .contact-form button:hover {
@@ -359,7 +363,6 @@ textarea {
 
 /* FOOTER elements */
 footer {
-    background-color: var(--light);
     height: 6vh;
     text-align: center;
 }
