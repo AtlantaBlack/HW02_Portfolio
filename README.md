@@ -14,7 +14,7 @@ As a brand new web developer, I have recently learnt about Flexbox and media que
 
 [Link to GitHub repository](https://github.com/AtlantaBlack/HW02_Portfolio)
 
-![Screenshot of Professional Porfolio](assets/images/01-html-css-git-homework-demo.png?raw=true "Sushan Yue portfolio screenshot")
+![Screenshot of Professional Porfolio](assets/images/screenshot-application.jpg?raw=true "Sushan Yue portfolio screenshot")
 
 ---
 
