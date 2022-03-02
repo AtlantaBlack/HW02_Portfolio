@@ -61,7 +61,7 @@ a:visited {
 
     padding: 0.5rem;
     border: 0.08rem solid var(--darkest);
-    border-radius: 21%/41%;
+    border-radius: 0.85rem;
 }
 
 a:hover {
@@ -161,6 +161,11 @@ section.row {
 
     background-color: var(--darkest);
     color: var(--light);
+
+    border-radius: 1.2rem;
+    overflow: hidden;
+
+    box-shadow: 0 0.5rem 0.5rem rgba(255, 255, 255, 0.6);
 }
 
 .about-card {
@@ -171,12 +176,12 @@ section.row {
     height: 100%;
     
     text-align: center;
-    padding: 1rem 2rem;
+    padding: 1rem 2.5rem;
 }
 
 .about-list {
     /* border: 1px solid cyan; */
-    margin: 1rem;
+    margin: 1.5rem 1rem;
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
@@ -216,7 +221,9 @@ li p {
     display: flex;
     flex-flow: column wrap;
     justify-content: space-between;
-    margin: 2rem;
+    padding: 2rem;
+
+    background-color: var(--light);
 }
 
 
@@ -224,6 +231,9 @@ li p {
 #portfolio-text-container {
     /* border: 1px solid red; */
     flex: 0 0 100%;
+
+    margin-bottom: 1.5rem;
+    padding-top: 1rem;
 }
 
 #portfolio-text {
@@ -233,9 +243,6 @@ li p {
     align-items: center;
     text-align: center;
 
-    background-color: var(--light);
-    margin-bottom: 1.5rem;
-    padding-top: 1rem;
 }
 
 
@@ -319,18 +326,6 @@ a#new-showcase-card {
 
 /* MAIN: contact section */
 
-.contact-form {
-    text-align: left;
-}
-
-.contact-form label {
-    display: block;
-}
-
-.contact-form input {
-    margin-bottom: 1.5rem;
-}
-
 .contact-platforms li img {
     width: 1rem;
     height: 1rem;
@@ -363,6 +358,61 @@ a#new-showcase-card {
     background-color: var(--serene-green);
     color: var(--lightest);
     border-color: var(--serene-green);
+}
+
+.contact-form {
+    text-align: left;
+    margin: 1rem 0;
+
+    border: 4px dotted var(--lightest);
+    line-height: 2rem;
+    padding: 0.8rem;
+}
+
+.contact-form label {
+    display: block;
+}
+
+.contact-form input {
+    margin-bottom: 1.5rem;
+}
+
+::placeholder {
+    color: var(--dark);
+}
+
+input[type=text], textarea {
+    padding:10px;
+    border:0;
+    /* box-shadow: 0 0 15px 2px var(--serene-green); */
+    border-radius: 0.4rem;
+    width: 30vw;
+
+    font-family: "Proxima Nova", "Europa", "Helvetica", Arial, sans-serif;
+    font-weight: 300;
+    color: var(--text);
+}
+
+textarea {
+    min-height: 10%;
+    max-height: 50vh;
+
+    min-width: 100%;
+    max-width: 40vw;
+}
+
+.contact-form button {
+    -webkit-appearance:none;
+    appearance:none;
+
+    border: 2px solid var(--lightest);
+    width: 150px;
+    padding: 0.25rem;
+    background-color: var(--darkest);
+    color: var(--lightest);
+    font-weight: 700;
+    border-radius: 0.5rem;
+
 }
 
 
