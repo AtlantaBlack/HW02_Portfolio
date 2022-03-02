@@ -4,19 +4,15 @@
     --dark: rgb(187, 191, 202);
     --light: rgb(238, 238, 238);
     --lightest: rgb(244, 244, 242);
-    --serene-green: rgb(124, 148, 115);
 
-    /* --text: #22223b;
-    --darkest: #4a4e69;
-    --dark: #9a8c98;
-    --light: #c9ada7;
-    --lightest: #f2e9e4;
+    --serene-green: rgb(140, 153, 135);
+    --forest-green: rgb(124, 148, 115);
 
-    --serene-green: rgb(124, 148, 115);
-
-    --light-grey: rgb(238, 238, 238);
-    --off-white: rgb(244, 244, 242); */
-
+    --inky: #22223b;
+    --night: #4a4e69;
+    --dessert-night: #8f838d;
+    --dessert: #cfb4ae;
+    --sand: #f2e9e4;
 }
 
 * {
@@ -34,19 +30,13 @@ body {
 h1, h2, h3, h4, h5, h6 {
     /* font-family: "Proxima Nova", "Europa", "Helvetica", Arial, sans-serif; */
     font-family: "Garamond", "Georgia", "Times New Roman", Times, serif;
+    line-height: 1;
 }
 
-h1 { 
-    font-size: 3.8rem; 
-    line-height: 1; 
-}
-
-h2 { 
-    font-size: 1.5rem;
-}
-
-h3 { font-size: 1.2rem; 
-}
+h1 { font-size: 3.8rem; }
+h2 { font-size: 1.8rem; 
+    color: var(--sand); }
+h3 { font-size: 1.2rem; }
 
 a, 
 a:hover,
@@ -59,7 +49,7 @@ a:visited {
     background-color: var(--light);
     color: var(--darkest);
 
-    padding: 0.5rem;
+    padding: 0.5rem 0.65rem;
     border: 0.08rem solid var(--darkest);
     border-radius: 0.85rem;
 }
@@ -157,7 +147,7 @@ section.row {
     /* border: 1px solid purple; */
     flex: 1 0 100%;
     max-width: 100%;
-    margin-bottom: 1rem;
+    margin: 0.5rem 0;
 
     background-color: var(--darkest);
     color: var(--light);
@@ -165,10 +155,11 @@ section.row {
     border-radius: 1.2rem;
     overflow: hidden;
 
-    box-shadow: 0 0.5rem 0.5rem rgba(255, 255, 255, 0.6);
+    box-shadow: 0 0 0 0.1rem rgba(244, 244, 242, 0.5);
 }
 
 .about-card {
+    /* border: 1px solid yellow; */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -185,6 +176,8 @@ section.row {
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
+
+    color: var(--dessert);
 }
 
 .about-item {
@@ -201,6 +194,7 @@ li p {
 .about-item::after {
     content: "|";
     padding-right: 0.3rem;
+    color: var(--dessert-night);
 }
 
 #portrait {
@@ -242,7 +236,6 @@ li p {
     justify-content: center;
     align-items: center;
     text-align: center;
-
 }
 
 
@@ -251,6 +244,7 @@ li p {
     width: 100%;
     height: 50vh;
     margin-bottom: 1.5rem;
+    box-shadow: 0 0.2rem 0.4rem rgba(73, 84, 100, 0.3);
 }
 
 .portfolio-container {
@@ -259,6 +253,7 @@ li p {
     width: 100%;
     height: 25vh;
     margin-bottom: 1rem;
+    box-shadow: 0 0.2rem 0.4rem rgba(73, 84, 100, 0.3);
 }
 
 a.new-gallery-card {
@@ -289,6 +284,14 @@ a.new-gallery-card {
     background-image: linear-gradient(to left, rgba(255,255,255,0.5), var(--lightest));
     color: var(--darkest);
     padding: 0.5rem;
+}
+
+.new-gallery-card:hover {
+    box-shadow: 0 0.2rem 0.4rem var(--darkest);
+}
+.new-gallery-card:hover p {
+    color: var(--lightest);
+    background-image: linear-gradient(to right, var(--darkest), rgba(255,255,255,0));
 }
 
 
@@ -334,8 +337,6 @@ a#new-showcase-card {
 
 .platforms-list {
     display: flex;
-    align-items: center;
-    justify-content: flex-start;
 }
 
 .platforms-list a, 
@@ -361,16 +362,16 @@ a#new-showcase-card {
 }
 
 .contact-form {
+    /* border: 0.1rem dashed var(--lightest); */
     text-align: left;
-    margin: 1rem 0;
-
-    border: 4px dotted var(--lightest);
+    margin-top: 1.5rem;
+    margin-bottom: 0.3rem;
     line-height: 2rem;
-    padding: 0.8rem;
 }
 
 .contact-form label {
     display: block;
+    margin-bottom: 0.4rem;
 }
 
 .contact-form input {
@@ -386,7 +387,7 @@ input[type=text], textarea {
     border:0;
     /* box-shadow: 0 0 15px 2px var(--serene-green); */
     border-radius: 0.4rem;
-    width: 30vw;
+    min-width: 200px;
 
     font-family: "Proxima Nova", "Europa", "Helvetica", Arial, sans-serif;
     font-weight: 300;
@@ -405,16 +406,23 @@ textarea {
     -webkit-appearance:none;
     appearance:none;
 
-    border: 2px solid var(--lightest);
+    border: 0.1rem solid var(--light);
     width: 150px;
     padding: 0.25rem;
-    background-color: var(--darkest);
-    color: var(--lightest);
-    font-weight: 700;
+    background-color: var(--light);
+    color: var(--text);
+    font-family: "Proxima Nova", "Europa", "Helvetica", Arial, sans-serif;
+    text-transform: uppercase;
+    font-weight: 300;
     border-radius: 0.5rem;
-
 }
 
+.contact-form button:hover {
+    border: 0.1rem solid var(--light);
+    background-color: var(--serene-green);
+    color: var(--lightest);
+    cursor: pointer;
+}
 
 /* FOOTER elements */
 footer {
