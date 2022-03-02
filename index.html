@@ -13,12 +13,15 @@
 <body>
     <!-- header -->
     <header>
+        <!-- header-row is the house (parent) for flexbox -->
         <div class="header-row">
+            <!-- there are two flex children in this house -->
+
             <div class="header-container">
-                <div class="intro">
+                <section class="intro">
                     <h1>Hi, I'm Sushan</h1>
                     <p class="italicised">it's a pleasure to meet you</p>
-                </div>  
+                </section>  
             </div>
 
             <div class="header-container">
@@ -38,10 +41,11 @@
         </div>
     </header>
 
-    <!-- main -->
+    <!-- main section -->
     <main>
      <!-- 'about' section -->
         <section class="row" id="about-me">
+            <!-- 'about' has two children in its flex house -->
 
             <div class="content-container">
                 <section class="content-card">
@@ -69,13 +73,14 @@
                 <div id="portrait">
                     <img src="./assets/images/profile-img-square.jpg" alt="Portrait of Sushan Yue" />
                 </div>
-            </div>
-            
+            </div>   
         </section>
 
         <!-- 'portfolio' section -->
         <section class="portfolio-row" id="portfolio">
+            <!-- 'portfolio' has a number of flex children -->
 
+            <!-- section for opening text -->
             <div id="portfolio-text-container">
                 <section id="portfolio-text">
                     <h2>Recent Works</h2>
@@ -83,6 +88,7 @@
                 </section>
             </div>
 
+                <!-- the main application display (big) -->
                 <section id="showcase-container">
                     <a id="showcase-card" href="https://atlantablack.github.io/P02-Flexbox/">
                         <img src="./assets/images/yoshi-bg-cropped.jpg" alt="Application 1 (Showcase)" />
@@ -90,7 +96,7 @@
                     </a>
                 </section>
             
-                
+                <!-- the following four application displays (smaller) -->
                 <section class="portfolio-container">
                     <a class="gallery-card" href="https://atlantablack.github.io/HW01_Code_Refactor/">
                         <img src="./assets/images/yoshi-bg-cropped.jpg" alt="Application 2" />
@@ -99,7 +105,6 @@
                 </section>
 
                 <section class="portfolio-container">
-        
                     <a class="gallery-card" href="https://atlantablack.github.io/P01-Landing-Page/">
                         <img src="./assets/images/aged-grunge-wall.jpg" alt="Application 3" />
                         <p>Landing Page</p>
@@ -107,7 +112,6 @@
                 </section>
 
                 <section class="portfolio-container">
-        
                     <a class="gallery-card" href="https://atlantablack.github.io/P01-Landing-Page/">
                         <img src="./assets/images/starfield-bg.jpg" alt="Application 4" />
                         <p>Application 4</p>
@@ -120,12 +124,13 @@
                         <p>Application 5</p>
                     </a>
                 </section>
-       
         </section>
 
         <!-- contact section -->
         <section class="row" id="contact">
+            <!-- 'contact' has two flex children -->
 
+            <!-- first section to link users to extra platforms I'm on -->
             <div class="content-container">
                 <section class="content-card">
                     <h2 class="italicised">Let's Chat!</h2>
@@ -136,29 +141,25 @@
                             <a href="https://GitHub.com"><img src="./assets/images/icon-GitHub.png" alt="GitHub" />
                             <p>GitHub</p></a>
                         </li>
-
                         <li class="platforms-list">
                             <a href="https://Instagram.com"><img src="./assets/images/icon-instagram.png" alt="Instagram" />
                             <p>Instagram</p></a>
                         </li>
-
                         <li class="platforms-list">
                             <a href="mailto:email.com"><img src="./assets/images/icon-email.png" alt="Email" />
                             <p>Email</p></a>
                         </li>
                     </ul>
-
                     <p>Looking forward to hearing from you!</p>
                 </section>
             </div>
 
+            <!-- second section contains the contact form -->
             <div class="content-container">
                 <section class="content-card">
-
                     <h2 class="italicised">Contact Form</h2>
 
                     <form class="contact-form">
-
                         <label for="name">Your name:</label>
                         <input type="text" id="name" name="name" placeholder="Write your name here" />
                    
@@ -167,10 +168,10 @@
                     
                         <button>Send</button>
                     </form>
-                    
                 </section>
             </div>
         </section>
+
     </main>
 
     <!-- footer -->
