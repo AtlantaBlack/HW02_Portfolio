@@ -188,8 +188,10 @@ li p {
 }
 
 /* using pseudo elements to style the about-me list */
+
+.about-list::before,
 .about-item::after {
-    content: "|" / ""; /* added a null alt so screen readers ignore this */
+    content: "•" / ""; /* added a null alt so screen readers ignore this */
     color: var(--dessert-night);
     padding-right: 0.3rem;
 }
@@ -436,12 +438,6 @@ footer {
 
     .content-card {
         padding: 1rem 2.5rem;
-    }
-
-    .about-list::before {
-    content: "|" / ""; /* added a null alt so screen readers ignore this */
-    color: var(--dessert-night);
-    padding-right: 0.3rem;
     }
 }
 
