@@ -40,8 +40,9 @@ h1 {
 }
 
 h2 { 
-    font-size: 1.8rem; 
+    font-size: 1.8rem;
     color: var(--sand);
+    text-align: center;
 }
 
 h3 { 
@@ -101,11 +102,11 @@ header a:hover {
 /* adding min-height to ensure small screens can view the header as nicely as big screens */
 .header-row {
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: column wrap;
     align-items: center;
     justify-content: center;
     min-height: 350px;
-    margin: 6%;
+    margin: 6% 4%;
 }
 
 .header-container {
@@ -125,7 +126,12 @@ header a:hover {
     align-items: center;
 }
 
-.main-nav li,
+.main-nav li {
+    display: inline;
+    flex: 1 0 100%;
+    line-height: 2.8rem;
+}
+
 .about-item {
     display: inline;
 }
@@ -139,7 +145,7 @@ section.row {
     display: flex;
     flex-flow: row wrap;
     align-items: stretch;
-    margin: 2rem;
+    margin: 2rem 0.3rem;
 }
 
 
@@ -164,8 +170,7 @@ section.row {
     justify-content: center;
     align-items: center; 
     height: 100%;
-    
-    padding: 1rem 2.5rem;
+    padding: 1rem 0.6rem;
     margin-bottom: 0.3rem;
 }
 
@@ -183,7 +188,6 @@ li p {
 }
 
 /* using pseudo elements to style the about-me list */
-.about-list::before, 
 .about-item::after {
     content: "|" / ""; /* added a null alt so screen readers ignore this */
     color: var(--dessert-night);
@@ -215,14 +219,13 @@ li p {
     flex-flow: column wrap;
     justify-content: space-between;
     background-color: var(--light);
-    padding: 2rem;
+    padding: 0;
 }
 
 /* the following two classes are for the intro text to the portfolio section */
 #portfolio-text-container {
     flex: 0 0 100%;
     margin-bottom: 1.5rem;
-    padding-top: 1rem;
 }
 
 #portfolio-text {
@@ -231,6 +234,7 @@ li p {
     justify-content: center;
     align-items: center;
     text-align: center;
+    margin-top: 1rem;
 }
 
 /* showcase container is for the main application */
@@ -248,7 +252,7 @@ li p {
     width: 100%;
     height: 25vh;
     box-shadow: 0 0.2rem 0.4rem rgba(73, 84, 100, 0.3);
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
 }
 
 /* make the application display cards as links */
@@ -332,6 +336,10 @@ a#showcase-card {
 }
 
 /* contact form styling */
+#contact-form-h2 {
+    margin-bottom: 0rem;
+}
+
 .contact-form {
     text-align: left;
     line-height: 2rem;
@@ -409,25 +417,71 @@ footer {
 
 
 /* MEDIA QUERIES */
-@media screen and (min-width: 768px) {
-    .row, .portfolio-row {
-        flex-direction: row;
-        justify-content: space-between;
+
+/* the base css was made using mobile first design to suit the Galaxy Fold first (280px wide). Media queries scale upwards from 281px */
+
+@media screen and (min-width: 361px) {
+    .header-container {
+        width: 100%;
     }
 
-    .about-container, .portfolio-container {
-        flex: 1 0 48%;
-        max-width: 48%;
+    .main-nav li {
+        flex: 0;
+    }
+
+    section.row {
+        margin-left: 0.5rem;
+        margin-right: 0.5rem;
+    }
+
+    .content-card {
+        padding: 1rem 2.5rem;
+    }
+
+    .about-list::before {
+    content: "|" / ""; /* added a null alt so screen readers ignore this */
+    color: var(--dessert-night);
+    padding-right: 0.3rem;
     }
 }
 
-@media screen and (max-width: 281px) {
-    .portfolio-row {
-        flex-direction: column;
-        justify-content: space-between;
+@media screen and (min-width: 539px) {
+     .header-row {
+        flex-direction: row;
+        margin: 6%;
     }
 
-    .portfolio-container {
-        height: 15vh;
+    .main-nav {
+        justify-content: flex-end;
+    }
+
+    .main-nav li {
+        line-height: 1rem;
+        margin-left: 2rem;
+    }
+
+    section.row {
+        margin-left: 2rem;
+        margin-right: 2rem;
+    }
+    
+    .portfolio-row {
+        flex-direction: row;
+        padding: 2rem;
+    }
+}
+
+@media screen and (min-width: 770px) {
+    section.row {
+        justify-content: space-between;
+    }
+    
+    .portfolio-row {
+        padding: 1rem 2rem;
+    }
+
+    .content-container, .portfolio-container {
+        flex: 1 0 48%;
+        max-width: 48%;
     }
 }
