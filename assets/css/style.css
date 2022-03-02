@@ -20,6 +20,8 @@
     line-height: 1.5rem;
 }
 
+/* global element styling here */
+
 body {
     font-family: "Garamond", "Georgia", "Times New Roman", Times, serif;
     background-color: var(--dark);
@@ -61,11 +63,16 @@ a, a:hover, a:visited {
     text-transform: uppercase;
 }
 
+/* specific class for italics to use as needed in html 
+(no semantic value here so that's why em is not being used) */
 .italicised {
     font-style: italic;
 }
 
+
 /* HEADER elements */
+
+/* global header elements placed towards the top, more specific classes towards the bottom */
 header, footer {
     border: 1px solid var(--light);
     background-color: var(--light);
@@ -91,12 +98,12 @@ header a:hover {
     border-color: var(--serene-green);
 }
 
+/* adding min-height to ensure small screens can view the header as nicely as big screens */
 .header-row {
     display: flex;
     flex-flow: row wrap;
     align-items: center;
     justify-content: center;
-
     min-height: 350px;
     margin: 6%;
 }
@@ -105,6 +112,7 @@ header a:hover {
     flex: 1 0 100%;
 }
 
+/* more contact-form styling is found towards the bottom of the css sheet */
 .intro,
 .contact-form input {
     margin-bottom: 1.5rem;
@@ -123,9 +131,10 @@ header a:hover {
 }
 
 
+/* MAIN elements */
 
-/* MAIN elements  */
-
+/* this section row controls the flex in each of the following html blocks: 
+about, portfolio, contact  */
 section.row {
     display: flex;
     flex-flow: row wrap;
@@ -133,21 +142,22 @@ section.row {
     margin: 2rem;
 }
 
+
 /* MAIN: about me section */
+
+/* style the flex container for both 'about me' and 'contact' sections */
 .content-container {
     flex: 1 0 100%;
     max-width: 100%;
-    margin: 0.5rem 0;
-
     background-color: var(--darkest);
     color: var(--light);
-
     border-radius: 1.2rem;
-    overflow: hidden;
-
     box-shadow: 0 0 0 0.1rem rgba(244, 244, 242, 0.5);
+    overflow: hidden;
+    margin: 0.5rem 0;
 }
 
+/* styling of actual content for both 'about me' and 'contact' sections */
 .content-card {
     display: flex;
     flex-direction: column;
@@ -160,11 +170,11 @@ section.row {
 }
 
 .about-list {
-    margin: 1.5rem 1rem;
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
     color: var(--dessert);
+    margin: 1rem;
 }
 
 li p {
@@ -172,13 +182,15 @@ li p {
     line-height: 0.5rem;
 }
 
+/* using pseudo elements to style the about-me list */
 .about-list::before, 
 .about-item::after {
-    content: "|";
-    padding-right: 0.3rem;
+    content: "|" / ""; /* added a null alt so screen readers ignore this */
     color: var(--dessert-night);
+    padding-right: 0.3rem;
 }
 
+/* portrait box won't appear anywhere else so it gets its own ID */
 #portrait {
     display: flex;
     min-height: 100%;
@@ -193,17 +205,20 @@ li p {
 
 /* MAIN: portfolio section */
 
+/* this one h2 the colour should be dark because the section has a light background colour */
 .portfolio-row h2 {
     color: var(--darkest);
 }
+
 .portfolio-row {
     display: flex;
     flex-flow: column wrap;
     justify-content: space-between;
-    padding: 2rem;
     background-color: var(--light);
+    padding: 2rem;
 }
 
+/* the following two classes are for the intro text to the portfolio section */
 #portfolio-text-container {
     flex: 0 0 100%;
     margin-bottom: 1.5rem;
@@ -218,38 +233,43 @@ li p {
     text-align: center;
 }
 
+/* showcase container is for the main application */
 #showcase-container {
     flex: 3 0 100%;
     width: 100%;
     height: 50vh;
-    margin-bottom: 1.5rem;
     box-shadow: 0 0.2rem 0.4rem rgba(73, 84, 100, 0.3);
+    margin-bottom: 1.5rem;
 }
 
+/* styling the following four application displays, which are smaller */
 .portfolio-container {
     flex: 1 0 auto;
     width: 100%;
     height: 25vh;
-    margin-bottom: 1rem;
     box-shadow: 0 0.2rem 0.4rem rgba(73, 84, 100, 0.3);
+    margin-bottom: 1rem;
 }
 
+/* make the application display cards as links */
 a.gallery-card,
 a#showcase-card {
+    position: relative;
     display: block;
     width: 100%;
     height: 25vh;
-    position: relative;
     background-color: var(--serene-green);
-    padding: 0;
     border: 0;
     border-radius: 0;
+    padding: 0;
 }
 
+/* specify different height for showcase application */
 a#showcase-card {
     height: 50vh;
 }
 
+/* making sure display card images fill up the holding container */
 .gallery-card img,
 #showcase-card img {
     width: inherit;
@@ -258,6 +278,7 @@ a#showcase-card {
     object-position: top right;
 }
 
+/* styling for text associated with application display image */
 .gallery-card p,
 #showcase-card p {
     position: absolute;
@@ -270,6 +291,7 @@ a#showcase-card {
     padding: 0.5rem;
 }
 
+/* hover effects for both showcase and regular app displays below */
 .gallery-card:hover,
 #showcase-card:hover {
     box-shadow: 0 0.2rem 0.4rem var(--darkest);
@@ -278,12 +300,14 @@ a#showcase-card {
 
 .gallery-card:hover p,
 #showcase-card:hover p {
-    color: var(--lightest);
     background-image: linear-gradient(to right, var(--darkest), rgba(255,255,255,0));
+    color: var(--lightest);
 }
 
 
 /* MAIN: contact section */
+
+/* styling for first how-to-contact-me box below */
 .contact-platforms li img {
     width: 1rem;
     height: 1rem;
@@ -307,10 +331,11 @@ a#showcase-card {
     border-color: var(--serene-green);
 }
 
+/* contact form styling */
 .contact-form {
     text-align: left;
-    margin: 1.5rem 0;
     line-height: 2rem;
+    margin: 1.5rem 0;
 }
 
 .contact-form label {
@@ -318,50 +343,55 @@ a#showcase-card {
     margin-bottom: 0.4rem;
 }
 
+/* make the placeholder text a different colour */
 ::placeholder {
     color: var(--dark);
 }
 
+/* style the input and textareas */
 input[type=text], textarea {
-    padding:10px;
-    border:0;
-    border-radius: 0.4rem;
     min-width: 200px;
     font-family: "Proxima Nova", "Europa", "Helvetica", Arial, sans-serif;
     font-weight: 300;
     color: var(--text);
+    border:0;
+    border-radius: 0.4rem;
+    padding:10px;
 }
 
+/* textarea is adjustable, but putting a minimum on height and width so users don't mess up the text area */
 textarea {
-    min-height: 10%;
-    max-height: 50vh;
     min-width: 100%;
     max-width: 40vw;
+    min-height: 10%;
+    max-height: 50vh;
 }
 
+/* styling the button */
 .contact-form button {
     -webkit-appearance: none;
     appearance: none;
     width: 150px;
-    border: 0.1rem solid var(--light);
-    border-radius: 0.5rem;
     background-color: var(--light);
-    color: var(--text);
+    color: var(--darkest);
     font-family: "Proxima Nova", "Europa", "Helvetica", Arial, sans-serif;
     text-transform: uppercase;
     font-weight: 300;
+    border: 0.1rem solid var(--light);
+    border-radius: 0.5rem;
     padding: 0.25rem;
     margin-top: 1rem;
 }
 
 .contact-form button:hover {
-    border: 0.1rem solid var(--light);
     background-color: var(--serene-green);
     color: var(--lightest);
     cursor: pointer;
 }
 
+
 /* FOOTER elements */
+
 footer {
     height: 6vh;
     text-align: center;
@@ -376,7 +406,6 @@ footer {
 .footer-container {
     flex: 1;
 }
-
 
 
 /* MEDIA QUERIES */
