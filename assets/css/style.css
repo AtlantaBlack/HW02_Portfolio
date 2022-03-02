@@ -85,11 +85,13 @@ header a:visited {
     border-radius: 0.85rem;
 }
 
-header a:hover {
+header a:hover,
+.platforms-list a:hover {
     background-color: var(--serene-green);
     color: var(--lightest);
     border-color: var(--serene-green);
 }
+
 
 .header-row {
     display: flex;
@@ -105,8 +107,9 @@ header a:hover {
     flex: 1 0 100%;
 }
 
-.intro {
-    margin-bottom: 2rem;
+.intro,
+.contact-form input {
+    margin-bottom: 1.5rem;
 }
 
 .main-nav {
@@ -124,7 +127,6 @@ header a:hover {
 
 /* MAIN elements  */
 
-/* FLEX SECTION ROWS */
 section.row {
     display: flex;
     flex-flow: row wrap;
@@ -295,27 +297,12 @@ a#new-showcase-card {
 .platforms-list a, 
 .platforms-list a:hover,
 .platforms-list a:visited {
-    text-decoration: none;
-    font-family: "Proxima Nova", "Europa", "Helvetica", Arial, sans-serif;
-    font-weight: 200;
-    text-transform: uppercase;
-
     background-color: var(--darkest);
     color: var(--lightest);
-
     padding: 0.2rem 0.5rem;
-    border: 0;
-    border-radius: 0;
-}
-
-.platforms-list a:hover {
-    background-color: var(--serene-green);
-    color: var(--lightest);
-    border-color: var(--serene-green);
 }
 
 .contact-form {
-    /* border: 0.1rem dashed var(--lightest); */
     text-align: left;
     margin-top: 1.5rem;
     margin-bottom: 0.3rem;
@@ -327,10 +314,6 @@ a#new-showcase-card {
     margin-bottom: 0.4rem;
 }
 
-.contact-form input {
-    margin-bottom: 1.5rem;
-}
-
 ::placeholder {
     color: var(--dark);
 }
@@ -338,10 +321,8 @@ a#new-showcase-card {
 input[type=text], textarea {
     padding:10px;
     border:0;
-    /* box-shadow: 0 0 15px 2px var(--serene-green); */
     border-radius: 0.4rem;
     min-width: 200px;
-
     font-family: "Proxima Nova", "Europa", "Helvetica", Arial, sans-serif;
     font-weight: 300;
     color: var(--text);
@@ -350,7 +331,6 @@ input[type=text], textarea {
 textarea {
     min-height: 10%;
     max-height: 50vh;
-
     min-width: 100%;
     max-width: 40vw;
 }
@@ -379,7 +359,6 @@ textarea {
 
 /* FOOTER elements */
 footer {
-    /* border: 1px solid green; */
     background-color: var(--light);
     height: 6vh;
     text-align: center;
@@ -420,15 +399,3 @@ footer {
         height: 15vh;
     }
 }
-
-/* @media screen and (min-width: 992px) {
-    .row, .portfolio-row {
-        justify-content: space-between;
-        margin: 0 5%;
-    }
-
-    .about-container, .portfolio-container {
-        flex: 1;
-        max-width: 48%;
-    }
-} */
