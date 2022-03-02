@@ -24,13 +24,13 @@ As a brand new web developer, I have recently learnt about Flexbox and media que
 
 [CSS Tricks - A Complete Guide to Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
 
+[CSS Tricks - Understanding Flex-Grow/Shrink/Basis](https://css-tricks.com/understanding-flex-grow-flex-shrink-and-flex-basis/)
+
 [Stack Overflow](https://stackoverflow.com/)
 
 [Shahed Nasser - Beginner CSS Grid Tutorial](https://blog.shahednasser.com/css-grid-tutorial-for-beginners/)
 
 [Log Rocket - Beginner guide to styling forms](https://blog.logrocket.com/how-to-style-forms-with-css-a-beginners-guide/)
-
-[Color Hunt - colour palettes](https://colorhunt.co/)
 
 [Coolors - colour palette generator](https://coolors.co/?home)
 
