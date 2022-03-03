@@ -3,7 +3,9 @@
     --darkest: rgb(73, 84, 100);
     --dark: rgb(187, 191, 202);
     --light: rgb(238, 238, 238);
-    --lightest: rgb(244, 244, 242);
+    --lightest: rgb(248, 248, 244);
+
+    --eggshell: rgb(247, 247, 244);
 
     --serene-green: rgb(140, 153, 135);
     --forest-green: rgb(124, 148, 115);
@@ -15,6 +17,7 @@
     --sand: #f2e9e4;
 
     --focus-orange: #f17d3f;
+    --focus-yellow: rgb(243, 185, 59);
 }
 
 * {
@@ -78,7 +81,8 @@ a, a:hover {
 /* global header elements placed towards the top, more specific classes towards the bottom */
 header, footer {
     border: 1px solid var(--light);
-    background-color: var(--light);
+    background: var(--light) url(../images/textured-white.jpg) no-repeat;
+    background-size: cover;
 }
 
 header p {
@@ -86,7 +90,7 @@ header p {
 }
 
 header a {
-    background-color: var(--light);
+    background-color: var(--eggshell);
     color: var(--darkest);
 
     padding: 0.5rem 0.65rem;
@@ -102,7 +106,8 @@ header a:focus {
 }
 
 header a:focus {
-    outline: 3px dashed var(--focus-orange);
+    outline: 0.12rem solid var(--focus-orange);
+    border-color: var(--lightest);
 }
 
 /* adding min-height to ensure small screens can view the header as nicely as big screens */
@@ -319,12 +324,12 @@ a#showcase-card {
 
 .gallery-card:focus,
 #showcase-card:focus {
-    outline: 3px solid var(--focus-orange);
+    outline: 0.18rem solid var(--focus-orange);
 }
 
 .gallery-card:focus p,
 #showcase-card:focus p {
-    outline: 2px dashed var(--inky);
+    outline: 0.12rem dashed var(--inky);
 }
 
 
@@ -357,9 +362,10 @@ p.line-break {
 
 /* style the input and textareas */
 input[type=text], textarea {
-    min-width: 200px;
+    min-width: 100%;
     font-family: "Proxima Nova", "Europa", "Helvetica", Arial, sans-serif;
     font-weight: 300;
+    background-color: var(--lightest);
     color: var(--text);
     border:0;
     border-radius: 0.4rem;
@@ -374,26 +380,38 @@ textarea {
     max-height: 50vh;
 }
 
+input[type=text]:focus, 
+textarea:focus {
+    outline-color: var(--text);
+    box-shadow: 0 0 0.7rem 0.2rem var(--forest-green);
+}
+
 /* styling the button */
 .contact-form button {
     -webkit-appearance: none;
     appearance: none;
     width: 150px;
-    background-color: var(--light);
+    background-color: var(--eggshell);
     color: var(--darkest);
     font-family: "Proxima Nova", "Europa", "Helvetica", Arial, sans-serif;
     text-transform: uppercase;
     font-weight: 300;
-    border: 0.1rem solid var(--light);
+    border: 0.1rem solid var(--inky);
     border-radius: 0.5rem;
     padding: 0.25rem;
     margin-top: 1rem;
 }
 
-.contact-form button:hover {
+.contact-form button:hover,
+.contact-form button:focus {
     background-color: var(--serene-green);
     color: var(--lightest);
+    border-color: var(--lightest);
     cursor: pointer;
+}
+
+.contact-form button:focus {
+    outline: 0.15rem solid var(--focus-orange);
 }
 
 /* styling for 'additional platforms' below */
@@ -412,14 +430,15 @@ textarea {
     padding: 0.2rem 0.5rem;
 }
 
-.platforms-list a:hover {
+.platforms-list a:hover,
+.platforms-list a:focus {
     background-color: var(--serene-green);
     color: var(--lightest);
     border-color: var(--serene-green);
 }
 
 .platforms-list a:focus {
-    outline: 3px solid rgb(243, 185, 59);
+    outline: 0.1rem solid var(--focus-orange);
 }
 
 
