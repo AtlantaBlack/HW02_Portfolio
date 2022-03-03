@@ -13,6 +13,8 @@
     --dessert-night: #8f838d;
     --dessert: #cfb4ae;
     --sand: #f2e9e4;
+
+    --focus-orange: #f17d3f;
 }
 
 * {
@@ -57,7 +59,7 @@ p {
     line-height: 1.5rem;
 }
 
-a, a:hover, a:visited {
+a, a:hover {
     text-decoration: none;
     font-family: "Proxima Nova", "Europa", "Helvetica", Arial, sans-serif;
     font-weight: 200;
@@ -83,8 +85,7 @@ header p {
     text-align: left;
 }
 
-header a,
-header a:visited {
+header a {
     background-color: var(--light);
     color: var(--darkest);
 
@@ -93,10 +94,15 @@ header a:visited {
     border-radius: 0.85rem;
 }
 
-header a:hover {
+header a:hover,
+header a:focus {
     background-color: var(--serene-green);
     color: var(--lightest);
     border-color: var(--serene-green);
+}
+
+header a:focus {
+    outline: 3px dashed var(--focus-orange);
 }
 
 /* adding min-height to ensure small screens can view the header as nicely as big screens */
@@ -189,9 +195,8 @@ li p {
 
 /* using pseudo elements to style the about-me list */
 
-.about-list::before,
 .about-item::after {
-    content: "•" / ""; /* added a null alt so screen readers ignore this */
+    content: "•";
     color: var(--dessert-night);
     padding-right: 0.3rem;
 }
@@ -305,36 +310,28 @@ a#showcase-card {
 }
 
 .gallery-card:hover p,
-#showcase-card:hover p {
+.gallery-card:focus p,
+#showcase-card:hover p,
+#showcase-card:focus p {
     background-image: linear-gradient(to right, var(--darkest), rgba(255,255,255,0));
     color: var(--lightest);
+}
+
+.gallery-card:focus,
+#showcase-card:focus {
+    outline: 3px solid var(--focus-orange);
+}
+
+.gallery-card:focus p,
+#showcase-card:focus p {
+    outline: 2px dashed var(--inky);
 }
 
 
 /* MAIN: contact section */
 
-/* styling for first how-to-contact-me box below */
-.contact-platforms li img {
-    width: 1rem;
-    height: 1rem;
-    margin-right: 0.35rem;
-}
-
-.platforms-list {
-    display: flex;
-}
-
-.platforms-list a,
-.platforms-list a:visited {
-    background-color: var(--darkest);
-    color: var(--lightest);
-    padding: 0.2rem 0.5rem;
-}
-
-.platforms-list a:hover {
-    background-color: var(--serene-green);
-    color: var(--lightest);
-    border-color: var(--serene-green);
+p.line-break {
+    white-space: pre-line;
 }
 
 /* contact form styling */
@@ -399,6 +396,32 @@ textarea {
     cursor: pointer;
 }
 
+/* styling for 'additional platforms' below */
+.contact-platforms li img {
+    width: 1rem;
+    height: 1rem;
+    margin-right: 0.35rem;
+}
+
+.platforms-list {
+    display: flex;
+}
+
+.platforms-list a {
+    color: var(--lightest);
+    padding: 0.2rem 0.5rem;
+}
+
+.platforms-list a:hover {
+    background-color: var(--serene-green);
+    color: var(--lightest);
+    border-color: var(--serene-green);
+}
+
+.platforms-list a:focus {
+    outline: 3px solid rgb(243, 185, 59);
+}
+
 
 /* FOOTER elements */
 
@@ -422,7 +445,7 @@ footer {
 
 /* the base css was made using mobile first design to suit the Galaxy Fold first (280px wide). Media queries scale upwards from 281px */
 
-@media screen and (min-width: 361px) {
+@media screen and (min-width: 374px) {
     .header-container {
         width: 100%;
     }
@@ -435,6 +458,12 @@ footer {
         margin-left: 0.5rem;
         margin-right: 0.5rem;
     }
+
+    .about-list::before {
+    content: "•";
+    color: var(--dessert-night);
+    padding-right: 0.3rem;
+}
 
     .content-card {
         padding: 1rem 2.5rem;
