@@ -98,8 +98,11 @@ header a {
     border-radius: 0.85rem;
 }
 
+/* platforms-list is in contact section */
 header a:hover,
-header a:focus {
+header a:focus,
+.platforms-list a:hover,
+.platforms-list a:focus {
     background-color: var(--serene-green);
     color: var(--lightest);
     border-color: var(--serene-green);
@@ -428,13 +431,6 @@ textarea:focus {
 .platforms-list a {
     color: var(--lightest);
     padding: 0.2rem 0.5rem;
-}
-
-.platforms-list a:hover,
-.platforms-list a:focus {
-    background-color: var(--serene-green);
-    color: var(--lightest);
-    border-color: var(--serene-green);
 }
 
 .platforms-list a:focus {
