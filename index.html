@@ -53,13 +53,13 @@
 
                     <ul class="about-list italicised">
                         <li class="about-item">
-                            <p><span aria-hidden="true">•</span> fledgling web developer&nbsp;</p>
+                            <p>fledgling web developer</p>
                         </li>
                         <li class="about-item">
-                            <p><span aria-hidden="true">•</span> illustrator <span aria-hidden="true">•</span></p>
+                            <p>illustrator</p>
                         </li>
                         <li class="about-item">
-                            <p><span aria-hidden="true">•</span> avid lover of birds <span aria-hidden="true">•</span></p>
+                            <p>avid lover of birds</p>
                         </li>
                     </ul>
 
@@ -130,11 +130,33 @@
         <section class="row" id="contact">
             <!-- 'contact' has two flex children -->
 
-            <!-- first section to link users to extra platforms I'm on -->
+            <!-- this section contains the contact form -->
             <div class="content-container">
                 <section class="content-card">
-                    <h2 class="italicised">Let's Chat!</h2>
-                    <p>Use the contact form to get in touch. Alternatively, you can visit me on GitHub or Instagram:</p>
+                    <h2 id="contact-form-h2" class="italicised">Let's Chat!</h2>
+                    <p class="line-break">Want to talk web or art? 
+                        Use the contact form below to get in touch!</p>
+
+                    <form class="contact-form">
+                        <label for="name">Your name:</label>
+                        <input type="text" id="name" name="name" placeholder="Write your name here" />
+                   
+                        <label for="message">Your message:</label>
+                        <textarea id="message" name="message" placeholder="Write your message here"></textarea>
+                    
+                        <button>Send</button>
+                    </form>
+                </section>
+            </div>
+
+            <!-- this section has links to additional platforms for users to visit me on  -->
+            <div class="content-container">
+                <section class="content-card">
+                    <h2 class="italicised">Additional Contact Options</h2>
+                    <p class="line-break">Can't get enough of me? 
+                        I am also on GitHub and Instagram!</p>
+
+                    <p>The links below will take you to my profiles. If you prefer sending direct emails, I have included a handy email link at the end as well.</p>
                     
                     <ul class="contact-platforms">
                        <li class="platforms-list">
@@ -154,22 +176,6 @@
                 </section>
             </div>
 
-            <!-- second section contains the contact form -->
-            <div class="content-container">
-                <section class="content-card">
-                    <h2 id="contact-form-h2" class="italicised">Contact Form</h2>
-
-                    <form class="contact-form">
-                        <label for="name">Your name:</label>
-                        <input type="text" id="name" name="name" placeholder="Write your name here" />
-                   
-                        <label for="message">Your message:</label>
-                        <textarea id="message" name="message" placeholder="Write your message here"></textarea>
-                    
-                        <button>Send</button>
-                    </form>
-                </section>
-            </div>
         </section>
 
     </main>
