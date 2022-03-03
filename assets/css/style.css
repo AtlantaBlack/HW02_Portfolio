@@ -407,8 +407,6 @@ textarea:focus {
 
 .contact-form button:hover,
 .contact-form button:focus {
-    -webkit-appearance: none;
-    appearance: none;
     background-color: var(--serene-green);
     color: var(--lightest);
     border-color: var(--lightest);
