@@ -22,7 +22,17 @@ This application was built using:
 
 [Link to GitHub repository](https://github.com/AtlantaBlack/Portfolio)
 
-![GIF of Professional Porfolio](assets/images/02_Portfolio.gif?raw=true "Sushan Yue portfolio screenshot")
+---
+
+## Screenshots of Application
+
+![Screenshot of Professional Porfolio](assets/images/screenshot-portfolio.jpg?raw=true "Sushan Yue portfolio screenshot")
+
+---
+
+## Demo
+
+![GIF of Professional Porfolio](assets/images/demo-portfolio.gif?raw=true "Sushan Yue portfolio demo")
 
 ---
 
