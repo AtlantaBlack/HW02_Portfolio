@@ -1,4 +1,4 @@
-# BCS HW 02 - Professional Portfolio
+# Professional Portfolio
 
 ## Description
 
@@ -10,11 +10,11 @@ As a brand new web developer, I have recently learnt about Flexbox and media que
 
 ## Usage
 
-[Link to deployed application via GitHub Pages](https://atlantablack.github.io/HW02_Portfolio/)
+[Link to deployed application via GitHub Pages](https://atlantablack.github.io/Portfolio/)
 
-[Link to GitHub repository](https://github.com/AtlantaBlack/HW02_Portfolio)
+[Link to GitHub repository](https://github.com/AtlantaBlack/Portfolio)
 
-![Screenshot of Professional Porfolio](assets/images/screenshot-application.jpg?raw=true "Sushan Yue portfolio screenshot")
+![GIF of Professional Porfolio](assets/images/02_Portfolio.gif?raw=true "Sushan Yue portfolio screenshot")
 
 ---
 
