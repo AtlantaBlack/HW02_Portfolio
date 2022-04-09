@@ -4,7 +4,15 @@
 
 A professional portfolio is an important thing for any web developer to have. A well-designed and functional (not to mention accessible) website is a great way to showcase their skills and projects, no matter if the audience is potential clients or simply the world at large.
 
-As a brand new web developer, I have recently learnt about Flexbox and media queries. In my portfolio I have applied it to sections and elements throughout the page so that an aesthetically-pleasing and user-friendly layout can be produced. There were many challenges, most of them having to do with figuring out how flex actually worked. In the end I feel as though I have gained a great deal of new knowledge about CSS, Flexbox, and media queries, and how to use them, at least for now, semi-confidently.
+---
+
+## Technologies Used
+
+This application was built using: 
+
+* HTML
+
+* CSS
 
 ---
 
@@ -34,12 +42,6 @@ As a brand new web developer, I have recently learnt about Flexbox and media que
 
 [Coolors - colour palette generator](https://coolors.co/?home)
 
-AskBCS Learning Assistant
-
-Friday class tutor
-
-Class Notes
-
 ---
 
 ## License
@@ -47,3 +49,9 @@ Class Notes
 © 2022 Sushan Yue
 
 [MIT License](/LICENSE)
+
+---
+
+## Contact
+
+[Sushan Yue @ GitHub](https://github.com/AtlantaBlack)
